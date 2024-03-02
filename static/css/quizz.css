@@ -1,5 +1,5 @@
 mark.cursor {
-    padding: 5px;
+    padding: 1px;
     animation-name: blinking-cursor;
     animation-duration: 1s;
     animation-iteration-count: 100;

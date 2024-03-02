@@ -1,16 +1,34 @@
-<html>
-    <head>
-        <link rel="stylesheet" href="/css/prism.css">
-        <link rel="stylesheet" href="/css/quizz.css">
-        <script src="/js/prism.js"></script>
-    </head>
-    <body>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/prism.css" />
+    <link rel="stylesheet" href="/css/quizz.css" />
+    <script src="/js/prism.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>vim-quiz</h1>
+      <div class="row">
+      </div>
+      <div class="row">
         <pre>
-            <code class="language-rust">
-                let x = 5;
-                let taco = <mark>"b<mark class="cursor">a</mark>r"</mark>;
-                println!("x = {}", x);
-            </code>
+          <code class="rust">
+            {{{card.code}}}
+          </code>
         </pre>
-    </body>
+      </div>
+      <div class="row">
+        <p>{{{card.question}}}</p>
+      </div>
+      <div class="row">
+        {{#each card.answer}}
+          <div class="col-md-6">
+            <p><strong>{{{this.name}}}</strong> - {{this.description}}</p>
+          </div>
+        {{/each}}
+      </div>
+      <div class="row">
+        <p>{{{card.explanation}}}</p>
+    </div>
+  </body>
 </html>
